@@ -1,6 +1,6 @@
 {
   "name": "stylus-helpers",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "mixins for writing stylus",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -19,7 +19,7 @@
     "url": "https://github.com/kobaatsu/stylus-helpers/issues"
   },
   "homepage": "https://github.com/kobaatsu/stylus-helpers#readme",
-  "dependencies": {
+  "devDependencies": {
     "concat": "^1.0.3"
   }
 }
