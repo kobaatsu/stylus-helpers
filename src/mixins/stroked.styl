@@ -1,0 +1,15 @@
+stroked(width, color)
+  x = 0
+  y = 0
+  bufX = 0
+  bufY = 0
+  buf = ''
+  for i in (0...36)
+    x = floor(width * sin(i * 10deg))
+    y = floor(width * cos(i * 10deg))
+    unless (x == bufX) && (y == bufY)
+      buf += ', ' unless i == 0
+      buf += join(' ', x y '1px' color)
+    bufX = x
+    bufY = y
+  text-shadow unquote(buf)

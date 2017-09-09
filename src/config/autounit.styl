@@ -1,0 +1,14 @@
+autoUnit()
+  arg = ''
+  for val, i in arguments
+    if i > 0
+      arg += ' '
+    if type(val) is 'unit'
+      if unit(val) is ''
+        arg += val px
+      else
+        arg += val
+    else
+      arg += val
+
+  return unquote(arg)

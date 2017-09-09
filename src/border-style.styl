@@ -1,0 +1,17 @@
+bds(arguments)
+  if arguments
+    border-style arguments
+  else
+    border-style solid
+bds-xs()
+  +xs()
+    bds(arguments)
+bds-sm()
+  +sm()
+    bds(arguments)
+bds-md()
+  +md()
+    bds(arguments)
+bds-lg()
+  +lg()
+    bds(arguments)

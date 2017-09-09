@@ -1,0 +1,18 @@
+triangle(color, forward = u, base, d)
+  width 0
+  height 0
+  border-style solid
+  w = round(base / 2)
+  h = round(w / tan((d / 2)deg))
+  if forward == d
+    border-width (h)px (w)px 0
+    border-color color transparent transparent
+  else if forward == r
+    border-width (w)px 0 (w)px (h)px
+    border-color transparent transparent transparent color
+  else if forward == l
+    border-width (w)px (h)px (w)px 0
+    border-color transparent color transparent transparent
+  else
+    border-width 0 (w)px (h)px (w)px
+    border-color transparent transparent color

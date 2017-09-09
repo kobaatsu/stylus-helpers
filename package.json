@@ -1,0 +1,25 @@
+{
+  "name": "stylus-helpers",
+  "version": "0.0.1",
+  "description": "mixins for writing stylus",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "concat -o helper.styl ./src/config/*.styl ./src/*.styl  ./src/mixins/*.styl"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kobaatsu/stylus-helpers.git"
+  },
+  "keywords": [
+    "stylus"
+  ],
+  "author": "KOBAYASHI atsushi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kobaatsu/stylus-helpers/issues"
+  },
+  "homepage": "https://github.com/kobaatsu/stylus-helpers#readme",
+  "dependencies": {
+    "concat": "^1.0.3"
+  }
+}
