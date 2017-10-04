@@ -1,0 +1,8 @@
+ratio(x = 100%, h = 1, v = h)
+  position relative
+  width 100%
+  overflow hidden
+  &::after
+    padding-top (floor(h/v*100))%
+    display block
+    content ""
