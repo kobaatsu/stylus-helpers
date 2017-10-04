@@ -896,6 +896,15 @@ justify()
   text-align justify
   text-justify inter-ideograph
 
+ratio(x = 100%, h = 1, v = h)
+  position relative
+  width 100%
+  overflow hidden
+  &::after
+    padding-top (floor(h/v*100))%
+    display block
+    content ""
+
 sz(w = auto, h = w)
   width autoUnit(w)
   height autoUnit(h)
