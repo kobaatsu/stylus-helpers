@@ -37,8 +37,8 @@ media queryやよくあるCSSルールの組み合わせをバカ正直に書く
 
 [npm](https://www.npmjs.com/package/stylus-helpers) からインストールしてください。
 
-```
-npm i -D stylus-helpers
+```console
+$npm i -D stylus-helpers
 ```
 
 ## 使い方
@@ -60,7 +60,8 @@ npm i -D stylus-helpers
 #### 数値を指定するもの
 
 ##### source
-```
+
+```stylus
 .hoge
   h 20
   w 40%
@@ -68,7 +69,8 @@ npm i -D stylus-helpers
 ```
 
 ##### yield
-```
+
+```css
 .hoge {
   height: 20px;
   width: 40%;
@@ -81,15 +83,18 @@ npm i -D stylus-helpers
 ##### よくある組み合わせの略記
 
 ##### source
-```
+
+```stylus
 .hoge
   db()
   flr()
   por()
 
 ```
+
 ##### yield
-```
+
+```css
 .hoge {
   display: block;
   float: right;
@@ -115,14 +120,16 @@ npm i -D stylus-helpers
 略記ルールと組み合わせて使えます。
 
 ##### source
-```
+
+```stylus
 .hoge
   t 50
   t-sm 20
 ```
 
 ##### yield
-```
+
+```css
 .hoge {
   top: 50px;
 }
@@ -139,7 +146,8 @@ npm i -D stylus-helpers
 stylus の標準記法 [Block mixins](http://stylus-lang.com/docs/mixins.html#block-mixins) として使用できます。
 
 ##### source
-```
+
+```stylus
 .hoge
   width 100px  
   +xs()
@@ -147,7 +155,8 @@ stylus の標準記法 [Block mixins](http://stylus-lang.com/docs/mixins.html#bl
 ```
 
 ##### yield
-```
+
+```css
 .hoge {
   width: 100px;
 }
@@ -162,7 +171,8 @@ stylus の標準記法 [Block mixins](http://stylus-lang.com/docs/mixins.html#bl
 Block mixins として使用する場合、media queryを組み合わせて上限・下限を指定することもできます。
 
 ##### source
-```
+
+```stylus
 .hoge
   // (下限)-(上限)で指定します
   +sm-md()
@@ -170,7 +180,8 @@ Block mixins として使用する場合、media queryを組み合わせて上�
 ```
 
 ##### yield
-```
+
+```css
 .hoge {
   width: 100px;
 }
@@ -203,4 +214,4 @@ Block mixins として使用する場合、media queryを組み合わせて上�
 
 ## build
 
-`npm install` 後、 `npm run build` します。
+`$npm install` 後、 `$npm run build` します。
