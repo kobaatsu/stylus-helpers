@@ -63,7 +63,7 @@ xs-md(obj = null)
         {key} autoUnit(val)
 
 sm-md(obj = null)
-  @media (min-width: autoUnit(size.xs + 1)) and (max-width: autoUnit(size.sm))
+  @media (min-width: autoUnit(size.xs + 1)) and (max-width: autoUnit(size.md))
     {block}
     if obj
       for key, val in obj
@@ -203,7 +203,7 @@ bdr-lg()
   +lg()
     bdr(arguments)
 
-bds(arguments)
+bds()
   if arguments
     border-style arguments
   else
@@ -612,7 +612,7 @@ mt-lg(val = auto)
     mt(val)
 
 m()
-  if arguments
+  if typeof(arguments) is 'unit'
     margin autoUnit(arguments)
   else
     margin auto
