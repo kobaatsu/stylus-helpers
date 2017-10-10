@@ -173,6 +173,21 @@ bdl-lg()
   +lg()
     bdl(arguments)
 
+bdrs()
+  border-radius autoUnit(arguments)
+bdrs-xs()
+  +xs()
+    bdrs(arguments)
+bdrs-sm()
+  +sm()
+    bdrs(arguments)
+bdrs-md()
+  +md()
+    bdrs(arguments)
+bdrs-lg()
+  +lg()
+    bdrs(arguments)
+
 bdr()
   border-right autoUnit(arguments)
 bdr-xs()
@@ -310,6 +325,21 @@ clr-md()
 clr-lg()
   +lg()
     clr()
+
+c()
+  color arguments
+c-xs()
+  +xs()
+    c(arguments)
+c-sm()
+  +sm()
+    c(arguments)
+c-md()
+  +md()
+    c(arguments)
+c-lg()
+  +lg()
+    c(arguments)
 
 cn(content = none)
   content content
@@ -865,6 +895,15 @@ font-min()
 justify()
   text-align justify
   text-justify inter-ideograph
+
+ratio(x = 100%, h = 1, v = h)
+  position relative
+  width 100%
+  overflow hidden
+  &::after
+    padding-top (floor(v/h*100))%
+    display block
+    content ""
 
 sz(w = auto, h = w)
   width autoUnit(w)

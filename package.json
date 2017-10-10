@@ -1,6 +1,6 @@
 {
   "name": "stylus-helpers",
-  "version": "0.0.2",
+  "version": "0.0.8",
   "description": "mixins for writing stylus",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,11 +10,18 @@
     "type": "git",
     "url": "git+https://github.com/kobaatsu/stylus-helpers.git"
   },
+  "bugs": {
+    "url": "https://github.com/kobaatsu/stylus-helpers/issues"
+  },
   "keywords": [
     "stylus"
   ],
-  "author": "KOBAYASHI atsushi",
+  "author": {
+    "name": "KOBAYASHI atsushi",
+    "email": "kobaatsu@ao-neko.com"
+  },
   "license": "MIT",
+  "main": "helper.styl",
   "bugs": {
     "url": "https://github.com/kobaatsu/stylus-helpers/issues"
   },
