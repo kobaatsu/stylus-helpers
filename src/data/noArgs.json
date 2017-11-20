@@ -1,0 +1,396 @@
+{
+  "size": [
+    {
+      "type": "xs"
+    },
+    {
+      "type": "sm"
+    },
+    {
+      "type": "md"
+    },
+    {
+      "type": "lg"
+    },
+    {
+      "type": "xl"
+    }
+  ],
+  "rule": [
+    {
+      "spell": "bdbn",
+      "property": "border-bottom",
+      "value": "none"
+    },
+    {
+      "spell": "bdln",
+      "property": "border-left",
+      "value": "none"
+    },
+    {
+      "spell": "bdn",
+      "property": "border",
+      "value": "none"
+    },
+    {
+      "spell": "bdrn",
+      "property": "border-right",
+      "value": "none"
+    },
+    {
+      "spell": "bdtn",
+      "property": "border-top",
+      "value": "none"
+    },
+    {
+      "spell": "bgn",
+      "property": "background",
+      "value": "none"
+    },
+    {
+      "spell": "bgrn",
+      "property": "background-repeat",
+      "value": "none"
+    },
+    {
+      "spell": "bgszc",
+      "property": "background-size",
+      "value": "cover"
+    },
+    {
+      "spell": "clb",
+      "property": "clear",
+      "value": "both"
+    },
+    {
+      "spell": "cll",
+      "property": "clear",
+      "value": "left"
+    },
+    {
+      "spell": "cln",
+      "property": "clear",
+      "value": "none"
+    },
+    {
+      "spell": "clr",
+      "property": "clear",
+      "value": "right"
+    },
+    {
+      "spell": "db",
+      "property": "display",
+      "value": "block"
+    },
+    {
+      "spell": "df",
+      "property": "display",
+      "value": "flex"
+    },
+    {
+      "spell": "di",
+      "property": "display",
+      "value": "inline"
+    },
+    {
+      "spell": "dib",
+      "property": "display",
+      "value": "inline-block"
+    },
+    {
+      "spell": "dif",
+      "property": "display",
+      "value": "inline-flex"
+    },
+    {
+      "spell": "dli",
+      "property": "display",
+      "value": "list-item"
+    },
+    {
+      "spell": "dn",
+      "property": "display",
+      "value": "none"
+    },
+    {
+      "spell": "dtb",
+      "property": "display",
+      "value": "table"
+    },
+    {
+      "spell": "dtbc",
+      "property": "display",
+      "value": "table-cell"
+    },
+    {
+      "spell": "dtbcl",
+      "property": "display",
+      "value": "table-column"
+    },
+    {
+      "spell": "dtbr",
+      "property": "display",
+      "value": "table-row"
+    },
+    {
+      "spell": "fll",
+      "property": "float",
+      "value": "left"
+    },
+    {
+      "spell": "fln",
+      "property": "float",
+      "value": "none"
+    },
+    {
+      "spell": "flr",
+      "property": "float",
+      "value": "right"
+    },
+    {
+      "spell": "fxwn",
+      "property": "flex-wrap",
+      "value": "nowrap"
+    },
+    {
+      "spell": "fxww",
+      "property": "flex-wrap",
+      "value": "wrap"
+    },
+    {
+      "spell": "fxwwr",
+      "property": "flex-wrap",
+      "value": "wrap-reverse"
+    },
+    {
+      "spell": "fwb",
+      "property": "font-weight",
+      "value": "bold"
+    },
+    {
+      "spell": "fwn",
+      "property": "font-weight",
+      "value": "normal"
+    },
+    {
+      "spell": "jcc",
+      "property": "justify-content",
+      "value": "center"
+    },
+    {
+      "spell": "jcfe",
+      "property": "justify-content",
+      "value": "flex-end"
+    },
+    {
+      "spell": "jcfs",
+      "property": "justify-content",
+      "value": "flex-start"
+    },
+    {
+      "spell": "jcsa",
+      "property": "justify-content",
+      "value": "space-around"
+    },
+    {
+      "spell": "jcsb",
+      "property": "justify-content",
+      "value": "space-between"
+    },
+    {
+      "spell": "lisn",
+      "property": "list-style",
+      "value": "none"
+    },
+    {
+      "spell": "oln",
+      "property": "outline",
+      "value": "none"
+    },
+    {
+      "spell": "ova",
+      "property": "overflow",
+      "value": "auto"
+    },
+    {
+      "spell": "ovh",
+      "property": "overflow",
+      "value": "hidden"
+    },
+    {
+      "spell": "ovs",
+      "property": "overflow",
+      "value": "scroll"
+    },
+    {
+      "spell": "ovv",
+      "property": "overflow",
+      "value": "visible"
+    },
+    {
+      "spell": "ovxa",
+      "property": "overflow-x",
+      "value": "auto"
+    },
+    {
+      "spell": "ovxh",
+      "property": "overflow-x",
+      "value": "hidden"
+    },
+    {
+      "spell": "ovxs",
+      "property": "overflow-x",
+      "value": "scroll"
+    },
+    {
+      "spell": "ovxv",
+      "property": "overflow-x",
+      "value": "visible"
+    },
+    {
+      "spell": "ovya",
+      "property": "overflow-y",
+      "value": "auto"
+    },
+    {
+      "spell": "ovyh",
+      "property": "overflow-y",
+      "value": "hidden"
+    },
+    {
+      "spell": "ovys",
+      "property": "overflow-y",
+      "value": "scroll"
+    },
+    {
+      "spell": "ovyv",
+      "property": "overflow-y",
+      "value": "visible"
+    },
+    {
+      "spell": "poa",
+      "property": "position",
+      "value": "absolute"
+    },
+    {
+      "spell": "pof",
+      "property": "position",
+      "value": "fixed"
+    },
+    {
+      "spell": "por",
+      "property": "position",
+      "value": "relative"
+    },
+    {
+      "spell": "pos",
+      "property": "position",
+      "value": "static"
+    },
+    {
+      "spell": "poen",
+      "property": "pointer-events",
+      "value": "none"
+    },
+    {
+      "spell": "tac",
+      "property": "text-align",
+      "value": "center"
+    },
+    {
+      "spell": "tal",
+      "property": "text-align",
+      "value": "left"
+    },
+    {
+      "spell": "tar",
+      "property": "text-align",
+      "value": "right"
+    },
+    {
+      "spell": "tdl",
+      "property": "text-decoration",
+      "value": "line-through"
+    },
+    {
+      "spell": "tdn",
+      "property": "text-decoration",
+      "value": "none"
+    },
+    {
+      "spell": "tdo",
+      "property": "text-decoration",
+      "value": "overline"
+    },
+    {
+      "spell": "tdu",
+      "property": "text-decoration",
+      "value": "underline"
+    },
+    {
+      "spell": "vasup",
+      "property": "vertical-align",
+      "value": "super"
+    },
+    {
+      "spell": "vat",
+      "property": "vertical-align",
+      "value": "top"
+    },
+    {
+      "spell": "vatt",
+      "property": "vertical-align",
+      "value": "text-top"
+    },
+    {
+      "spell": "vam",
+      "property": "vertical-align",
+      "value": "middle"
+    },
+    {
+      "spell": "vabl",
+      "property": "vertical-align",
+      "value": "baseline"
+    },
+    {
+      "spell": "vab",
+      "property": "vertical-align",
+      "value": "bottom"
+    },
+    {
+      "spell": "vatb",
+      "property": "vertical-align",
+      "value": "text-bottom"
+    },
+    {
+      "spell": "vasub",
+      "property": "vertical-align",
+      "value": "sub"
+    },
+    {
+      "spell": "vh",
+      "property": "visibility",
+      "value": "hidden"
+    },
+    {
+      "spell": "vv",
+      "property": "visibility",
+      "value": "visible"
+    },
+    {
+      "spell": "wsn",
+      "property": "white-space",
+      "value": "normal"
+    },
+    {
+      "spell": "wsnw",
+      "property": "white-space",
+      "value": "nowrap"
+    },
+    {
+      "spell": "wsp",
+      "property": "white-space",
+      "value": "pre"
+    }
+  ]
+}

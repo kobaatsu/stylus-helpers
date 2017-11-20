@@ -1,0 +1,9 @@
+{{#rule}}
+{{spell}}(arguments{{#default}} = {{default}}{{/default}})
+  {{property}} {{#autounit}}autoUnit({{/autounit}}arguments{{#autounit}}){{/autounit}}
+{{#size}}
+{{spell}}-{{type}}(arguments{{#default}} = {{default}}{{/default}})
+  +{{type}}()
+    {{spell}} arguments
+{{/size}}
+{{/rule}}

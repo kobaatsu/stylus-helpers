@@ -33,7 +33,9 @@ media queryやよくあるCSSルールの組み合わせをバカ正直に書く
 コンパイルに際してはお好きな方法でどうぞ。
 
 
-## インストール
+## インストールと使い方
+
+### インストール
 
 [npm](https://www.npmjs.com/package/stylus-helpers) からインストールしてください。
 
@@ -41,9 +43,7 @@ media queryやよくあるCSSルールの組み合わせをバカ正直に書く
 $npm i -D stylus-helpers
 ```
 
-## 使い方
-
-### インポート
+### 使い方
 
 使用したいstylusファイルの先頭で `@import` するのが簡単でいいと思います。
 
@@ -53,36 +53,11 @@ $npm i -D stylus-helpers
 
 ## 主な機能
 
-### 略記ルール
+### 略記
 
-よく使うcssルールを略記できます。基本的な書き方は [emmet](https://emmet.io/) に準拠しています。(現時点で全部カバーしているわけではありません...)
+よく使うcssルールの組み合わせを略記できます。
 
-#### 数値を指定するもの
-
-##### source
-
-```stylus
-.hoge
-  h 20
-  w 40%
-  m()
-```
-
-##### yield
-
-```css
-.hoge {
-  height: 20px;
-  width: 40%;
-  margin: auto;
-}
-```
-
-単位を省略した場合 `px` が付与されます(`line-height`など除く)。数値も省略した場合、`auto` が指定されます。
-
-##### よくある組み合わせの略記
-
-##### source
+#### source
 
 ```stylus
 .hoge
@@ -92,7 +67,7 @@ $npm i -D stylus-helpers
 
 ```
 
-##### yield
+#### yield
 
 ```css
 .hoge {
@@ -102,24 +77,45 @@ $npm i -D stylus-helpers
 }
 ```
 
-### media query
+### 値指定略記
+
+数値などを指定するルールを簡単に書けます。
+
+#### source
+
+```stylus
+.hoge
+  h 20
+  w 40%
+  m()
+```
+
+#### yield
+
+```css
+.hoge {
+  height: 20px;
+  width: 40%;
+  margin: auto;
+}
+```
+
+cssルールによっては単位やキーワードが補完されます。
+
+
+### media queryの略記
 
 現在 `bootstrap3.x` に合わせた4段階のmedia queryを採用しています。  
-`src/config/config.styl` を編集することで変更できます。
+`helper.styl` を直接編集することで変更できます。
 
-- xs  
-0 - 767px
-- sm  
-768px - 991px
-- md  
-992px - 1199px
-- lg  
-1200px -
+- xs : 0 - 767px
+- sm : 768px - 991px
+- md : 992px - 1199px
+- lg : 1200px -
 
-#### 基本的な使い方
-略記ルールと組み合わせて使えます。
+上記の略記ルールに、postfixとして組み合わせて使います。
 
-##### source
+#### source
 
 ```stylus
 .hoge
@@ -127,7 +123,7 @@ $npm i -D stylus-helpers
   t-sm 20
 ```
 
-##### yield
+#### yield
 
 ```css
 .hoge {
@@ -141,11 +137,11 @@ $npm i -D stylus-helpers
 }
 ```
 
-#### Block mixins として使用
+### media query を Block mixins として使用
 
-stylus の標準記法 [Block mixins](http://stylus-lang.com/docs/mixins.html#block-mixins) として使用できます。
+stylus の標準記法 [Block mixins](http://stylus-lang.com/docs/mixins.html#block-mixins) としてmedia queryを使用できます。
 
-##### source
+#### source
 
 ```stylus
 .hoge
@@ -154,7 +150,7 @@ stylus の標準記法 [Block mixins](http://stylus-lang.com/docs/mixins.html#bl
     width 50px
 ```
 
-##### yield
+#### yield
 
 ```css
 .hoge {
@@ -170,7 +166,7 @@ stylus の標準記法 [Block mixins](http://stylus-lang.com/docs/mixins.html#bl
 
 Block mixins として使用する場合、media queryを組み合わせて上限・下限を指定することもできます。
 
-##### source
+#### source
 
 ```stylus
 .hoge
@@ -179,7 +175,7 @@ Block mixins として使用する場合、media queryを組み合わせて上�
     width 100px
 ```
 
-##### yield
+#### yield
 
 ```css
 .hoge {
@@ -193,7 +189,7 @@ Block mixins として使用する場合、media queryを組み合わせて上�
 }
 ```
 
-### mixin
+### その他のmixin
 
 #### ratio(x, h, v)
 
@@ -212,6 +208,142 @@ Block mixins として使用する場合、media queryを組み合わせて上�
   // レスポンシブな正方形を作ります
 ```
 
-## build
+### 略記一覧
 
-`$npm install` 後、 `$npm run build` します。
+引数の指定 `()` の前にmedia queryを示す接尾辞 `-xs` `-sm` `-md` `-lg` `(-xl)` をつけることで、それぞれ対応する条件にのみ適用されるようになります。
+
+#### 値固定
+
+| 略記 | 展開されるプロパティ | 値 |
+|-------|-------------------|---------------:|
+| bdn() | border            | none          |
+| bdtn()| border-top        | none          |
+| bdrn()| border-right      | none          |
+| bdbn()| border-bottom     | none          |
+| bdln()| border-left       | none          |
+| bgn() | background        | none          |
+| bgrn()| background-repeat | none          |
+| bgszc()| background-size   | cover         |
+| clb() | clear             | both          |
+| clr() | clear             | right         |
+| cll() | clear             | left          |
+| cln() | clear             | none          |
+| db()  | display           | block         |
+| df()  | display           | flex          |
+| di()  | display           | inline        |
+| dib() | display           | inline-block  |
+| dif() | display           | inline-flex   |
+| dli() | display           | list-item     |
+| dn()  | display           | none          |
+| dtb() | display           | table         |
+| dtbc()| display           | table-cell    |
+| dtbcl()| display           | table-column  |
+| dtbr()| display           | table-row     |
+| flr() | float             | right         |
+| fll() | float             | left          |
+| fln() | float             | none          |
+| fxwn()| flex-wrap         | nowrap        |
+| fxww()| flex-wrap         | wrap          |
+| fxwwr()| flex-wrap         | wrap-reverse  |
+| fwb() | font-weight       | bold          |
+| fwn() | font-weight       | normal        |
+| jcc() | justify-content   | center        |
+| jcfe()| justify-content   | flex-end      |
+| jcfs()| justify-content   | flex-start    |
+| jcsa()| justify-content   | space-around  |
+| jcsb()| justify-content   | space-between |
+| lisn()| list-style        | none          |
+| oln() | outline           | none          |
+| ova() | overflow          | auto          |
+| ovh() | overflow          | hidden        |
+| ovs() | overflow          | scroll        |
+| ovv() | overflow          | visible       |
+| ovxa()| overflow-x        | auto          |
+| ovxh()| overflow-x        | hidden        |
+| ovxs()| overflow-x        | scroll        |
+| ovxv()| overflow-x        | visible       |
+| ovya()| overflow-y        | auto          |
+| ovyh()| overflow-y        | hidden        |
+| ovys()| overflow-y        | scroll        |
+| ovyv()| overflow-y        | visible       |
+| poa() | position          | absolute      |
+| pof() | position          | fixed         |
+| por() | position          | relative      |
+| pos() | position          | static        |
+| poen()| pointer-events    | none          |
+| tac() | text-align        | center        |
+| tal() | text-align        | left          |
+| tar() | text-align        | right         |
+| tdl() | text-decoration   | line-through  |
+| tdn() | text-decoration   | none          |
+| tdo() | text-decoration   | overline      |
+| tdu() | text-decoration   | underline     |
+| vasup()| vertical-align    | super         |
+| vat() | vertical-align    | top           |
+| vatt()| vertical-align    | text-top      |
+| vam() | vertical-align    | middle        |
+| vabl()| vertical-align    | baseline      |
+| vab() | vertical-align    | bottom        |
+| vatb()| vertical-align    | text-bottom   |
+| vasub()| vertical-align    | sub           |
+| vh()  | visibility        | hidden        |
+| vv()  | visibility        | visible       |
+| wsn() | white-space       | normal        |
+| wsnw()| white-space       | nowrap        |
+| wsp() | white-space       | pre           |
+
+
+#### 値指定
+
+| 略記| 展開されるプロパティ | デフォルト | 自動単位付与(px) |
+|-------|---------------------|---------|----------:|
+| bgi(image)  | background-image    |         |          |
+| bgsz(args) | background-size     | auto    | true     |
+| fz(n)   | font-size           |         | true     |
+| c(color)    | color               |         |          |
+| ls(n)   | letter-spacing      |         | true     |
+| lh(n)   | line-height         |         |          |
+| cnt(content)  | content             | none    |          |
+| m(args)   | margin         | auto    | true     |
+| mt(n)   | margin-top          | auto    | true     |
+| mr(n)   | margin-right        | auto    | true     |
+| mb(n)   | margin-bottom       | auto    | true     |
+| ml(n)   | margin-left         | auto    | true     |
+| p(args)    | padding             |         | true     |
+| pt(n)   | padding-top         |         | true     |
+| pr(n)   | padding-right       |         | true     |
+| pb(n)   | padding-bottom      |         | true     |
+| pl(n)   | padding-left        |         | true     |
+| t(n)    | top                 | auto    | true     |
+| r(n)    | right               | auto    | true     |
+| b(n)    | bottom              | auto    | true     |
+| l(n)    | left                | auto    | true     |
+| w(n)    | width               | auto    | true     |
+| h(n)    | height              | auto    | true     |
+| bdrs(args) | border-radius       | 0       | true     |
+| bd(args)   | border              |         |          |
+| bdw(n)  | border-width        |         | true     |
+| bds(keyword)  | border-style        | solid   |          |
+| bdc(color)  | border-color        |         |          |
+| bdt(n)  | border-top          |         |          |
+| bdtw(n) | border-top-width    |         | true     |
+| bdts(keyword) | border-top-style    | solid   |          |
+| bdtc(color) | border-top-color    |         |          |
+| bdr(n)  | border-right        |         |          |
+| bdrw(n) | border-right-width  |         | true     |
+| bdrst(keyword)| border-right-style  | solid   |          |
+| bdrc(color) | border-right-color  |         |          |
+| bdb(n)  | border-bottom       |         |          |
+| bdbw(n) | border-bottom-width |         | true     |
+| bdbs(keyword) | border-bottom-style | solid   |          |
+| bdbc(color) | border-bottom-color |         |          |
+| bdl(n)  | border-left         |         |          |
+| bdlw(n) | border-left-width   |         | true     |
+| bdls(keyword) | border-left-style   | solid   |          |
+| bdlc(color) | border-left-color   |         |          |
+| maw(n)  | max-width           | none    | true     |
+| mah(n)  | max-height          | none    | true     |
+| miw(n)  | min-width           |         | true     |
+| mih(n)  | min-height          |         | true     |
+| trf(args)   | transform           |         |          |
+| fx(args)   | flex                | 1       |          |

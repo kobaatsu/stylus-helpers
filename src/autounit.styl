@@ -4,7 +4,7 @@ autoUnit()
     if i > 0
       arg += ' '
     if type(val) is 'unit'
-      if unit(val) is ''
+      if unit(val) is '' and val isnt 0
         arg += val px
       else
         arg += val
