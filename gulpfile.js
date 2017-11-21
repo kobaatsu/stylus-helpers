@@ -12,16 +12,21 @@ const template = {
 };
 
 gulp.task("mustache", function(){
-  // gulp.src(template.noArgs)
-  //   .pipe(mustache(json.noArgs, {
-  //     extension: '.styl'
-  //   }))
-  //   .pipe(gulp.dest("./src"));
+  gulp.src(template.noArgs)
+    .pipe(mustache(json.noArgs, {
+      extension: '.styl'
+    }))
+    .pipe(gulp.dest("./src"));
 
   gulp.src(template.useArgs)
     .pipe(mustache(json.useArgs, {
       extension: '.styl'
     }))
     .pipe(gulp.dest("./src"));
+  }
+);
+
+gulp.task("default", function(){
+    gulp.start("mustache");
   }
 );

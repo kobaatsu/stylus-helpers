@@ -60,6 +60,12 @@
       "autounit": ""
     },
     {
+      "spell": "cn",
+      "property": "content",
+      "default": "none",
+      "autounit": ""
+    },
+    {
       "spell": "mt",
       "property": "margin-top",
       "default": "auto",
