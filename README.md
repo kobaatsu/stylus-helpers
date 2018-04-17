@@ -191,6 +191,11 @@ Block mixins として使用する場合、media queryを組み合わせて上�
 
 ### その他のmixin
 
+#### fvc(align-item-keyword)
+
+flexコンテナを作り、内容物を天地中央に配置します。
+`align-item-keyword` を指定することで内容物の位置も指定できます。
+
 #### ratio(x, h, v)
 
 横幅と縦横比(h:v)を指定することで長方形（デフォルトで正方形）を作ります。  
@@ -297,8 +302,10 @@ Block mixins として使用する場合、media queryを組み合わせて上�
 
 | 略記| 展開されるプロパティ | デフォルト | 自動単位付与(px) |
 |-------|---------------------|---------|----------:|
-| bgi(image)  | background-image    |         |          |
 | bgsz(args) | background-size     | auto    | true     |
+| bgc(color)  | background-color | transparent |         |
+| bgi(image)  | background-image |         |         |
+| bgp(args)  | background-potion | center center |         |
 | fz(n)   | font-size           |         | true     |
 | c(color)    | color               |         |          |
 | ls(n)   | letter-spacing      |         | true     |
