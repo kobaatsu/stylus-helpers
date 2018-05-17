@@ -18,9 +18,21 @@
   ],
   "rule": [
     {
+      "spell": "bgc",
+      "property": "background-color",
+      "default": "transparent",
+      "autounit": ""
+    },
+    {
       "spell": "bgi",
       "property": "background-image",
       "default": "",
+      "autounit": ""
+    },
+    {
+      "spell": "bgp",
+      "property": "background-position",
+      "default": "center center",
       "autounit": ""
     },
     {
