@@ -1,5 +1,8 @@
-fvc(align = center)
-  display flex
+fvc(align = center, block = true)
+  if block
+    display flex
+  else
+    display inline-flex
   flex-direction column
   jcc()
   align-items align
