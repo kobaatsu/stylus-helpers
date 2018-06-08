@@ -1,0 +1,17 @@
+breakpoints = (xs sm md lg)
+
+size = {
+  xs: 768
+  sm: 992
+  md: 1200
+  lg: Infinity
+}
+
+size.xs = _shBreakPoint.xs if _shBreakPoint.xs
+size.sm = _shBreakPoint.sm if _shBreakPoint.sm
+size.md = _shBreakPoint.md if _shBreakPoint.md
+size.lg = _shBreakPoint.lg if _shBreakPoint.lg
+
+if _shBreakPoint.xl
+  size.xl = _shBreakPoint.xl
+  push(breakpoints, xl)

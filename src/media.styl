@@ -1,62 +1,124 @@
+calcMaw(w)
+  return (w - 0.02)px
+
 xs(obj = null)
-  @media (max-width: autoUnit(size.xs))
+  @media (max-width: calcMaw(size.xs))
     {block}
     if obj
       for key, val in obj
         {key} autoUnit(val)
 
 sm(obj = null)
-  @media (min-width: autoUnit(size.xs + 1)) and (max-width: autoUnit(size.sm))
+  @media (min-width: autoUnit(size.xs)) and (max-width: calcMaw(size.sm))
     {block}
     if obj
       for key, val in obj
         {key} autoUnit(val)
 
 md(obj = null)
-  @media (min-width: autoUnit(size.sm + 1)) and (max-width: autoUnit(size.md))
+  @media (min-width: autoUnit(size.sm)) and (max-width: calcMaw(size.md))
     {block}
     if obj
       for key, val in obj
         {key} autoUnit(val)
 
-lg(obj = null)
-  @media (min-width: autoUnit(size.md + 1))
-    {block}
-    if obj
-      for key, val in obj
-        {key} autoUnit(val)
+if index(breakpoints, xl)
+  lg(obj = null)
+    @media (min-width: autoUnit(size.md)) and (max-width: calcMaw(size.lg))
+      {block}
+      if obj
+        for key, val in obj
+          {key} autoUnit(val)
+
+  xl(obj = null)
+    @media (min-width: autoUnit(size.lg))
+      {block}
+      if obj
+        for key, val in obj
+          {key} autoUnit(val)
+else
+  lg(obj = null)
+    @media (min-width: autoUnit(size.md))
+      {block}
+      if obj
+        for key, val in obj
+          {key} autoUnit(val)
 
 xs-sm(obj = null)
-  @media (max-width: autoUnit(size.sm))
+  @media (max-width: calcMaw(size.sm))
     {block}
     if obj
       for key, val in obj
         {key} autoUnit(val)
 
 xs-md(obj = null)
-  @media (max-width: autoUnit(size.md))
+  @media (max-width: calcMaw(size.md))
     {block}
     if obj
       for key, val in obj
         {key} autoUnit(val)
 
 sm-md(obj = null)
-  @media (min-width: autoUnit(size.xs + 1)) and (max-width: autoUnit(size.md))
+  @media (min-width: autoUnit(size.xs)) and (max-width: calcMaw(size.md))
     {block}
     if obj
       for key, val in obj
         {key} autoUnit(val)
 
-sm-lg(obj = null)
-  @media (min-width: autoUnit(size.xs + 1))
-    {block}
-    if obj
-      for key, val in obj
-        {key} autoUnit(val)
+if index(breakpoints, xl)
+  xs-lg(obj = null)
+    @media (max-width: calcMaw(size.lg))
+      {block}
+      if obj
+        for key, val in obj
+          {key} autoUnit(val)
 
-md-lg(obj = null)
-  @media (min-width: autoUnit(size.sm + 1))
-    {block}
-    if obj
-      for key, val in obj
-        {key} autoUnit(val)
+  sm-lg(obj = null)
+    @media (min-width: autoUnit(size.xs)) and (max-width: calcMaw(size.lg))
+      {block}
+      if obj
+        for key, val in obj
+          {key} autoUnit(val)
+
+  sm-xl(obj = null)
+    @media (min-width: autoUnit(size.xs))
+      {block}
+      if obj
+        for key, val in obj
+          {key} autoUnit(val)
+
+  md-lg(obj = null)
+    @media (min-width: autoUnit(size.sm)) and (max-width: calcMaw(size.lg))
+      {block}
+      if obj
+        for key, val in obj
+          {key} autoUnit(val)
+
+  md-xl(obj = null)
+    @media (min-width: autoUnit(size.sm))
+      {block}
+      if obj
+        for key, val in obj
+          {key} autoUnit(val)
+
+  lg-xl(obj = null)
+    @media (min-width: autoUnit(size.md))
+      {block}
+      if obj
+        for key, val in obj
+          {key} autoUnit(val)
+
+else
+  sm-lg(obj = null)
+    @media (min-width: autoUnit(size.xs))
+      {block}
+      if obj
+        for key, val in obj
+          {key} autoUnit(val)
+
+  md-lg(obj = null)
+    @media (min-width: autoUnit(size.sm))
+      {block}
+      if obj
+        for key, val in obj
+          {key} autoUnit(val)
