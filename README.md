@@ -316,11 +316,13 @@ flexコンテナを作り、内容物を天地中央に配置します。
 | mr(n)   | margin-right        | auto    | true     |
 | mb(n)   | margin-bottom       | auto    | true     |
 | ml(n)   | margin-left         | auto    | true     |
+| mx(n)   | margin-right / margin-left         | auto    | true     |
 | p(args)    | padding             |         | true     |
 | pt(n)   | padding-top         |         | true     |
 | pr(n)   | padding-right       |         | true     |
 | pb(n)   | padding-bottom      |         | true     |
 | pl(n)   | padding-left        |         | true     |
+| px(n)   | padding-right / padding-left         |      | true     |
 | t(n)    | top                 | auto    | true     |
 | r(n)    | right               | auto    | true     |
 | b(n)    | bottom              | auto    | true     |

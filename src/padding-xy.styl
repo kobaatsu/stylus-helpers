@@ -1,0 +1,46 @@
+px()
+  if typeof(arguments) is 'unit'
+    padding-right autoUnit(arguments)
+    padding-left autoUnit(arguments)
+  else
+    padding-right auto
+    padding-left auto
+px-xs()
+  +xs()
+    px(arguments)
+px-sm()
+  +sm()
+    px(arguments)
+px-md()
+  +md()
+    px(arguments)
+px-lg()
+  +lg()
+    px(arguments)
+
+if index(breakpoints, xl)
+  px-xl()
+    +xl()
+      px(arguments)
+
+py()
+  if typeof(arguments) is 'unit'
+    padding-top autoUnit(arguments)
+    padding-bottom autoUnit(arguments)
+py-xs()
+  +xs()
+    py(arguments)
+py-sm()
+  +sm()
+    py(arguments)
+py-md()
+  +md()
+    py(arguments)
+py-lg()
+  +lg()
+    py(arguments)
+
+if index(breakpoints, xl)
+  py-xl()
+    +xl()
+      py(arguments)

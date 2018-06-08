@@ -1,0 +1,49 @@
+mx()
+  if typeof(arguments) is 'unit'
+    margin-right autoUnit(arguments)
+    margin-left autoUnit(arguments)
+  else
+    margin-right auto
+    margin-left auto
+mx-xs()
+  +xs()
+    mx(arguments)
+mx-sm()
+  +sm()
+    mx(arguments)
+mx-md()
+  +md()
+    mx(arguments)
+mx-lg()
+  +lg()
+    mx(arguments)
+
+if index(breakpoints, xl)
+  mx-xl()
+    +xl()
+      mx(arguments)
+
+my()
+  if typeof(arguments) is 'unit'
+    margin-top autoUnit(arguments)
+    margin-bottom autoUnit(arguments)
+  else
+    margin-top auto
+    margin-bottom auto
+my-xs()
+  +xs()
+    my(arguments)
+my-sm()
+  +sm()
+    my(arguments)
+my-md()
+  +md()
+    my(arguments)
+my-lg()
+  +lg()
+    my(arguments)
+
+if index(breakpoints, xl)
+  my-xl()
+    +xl()
+      my(arguments)
