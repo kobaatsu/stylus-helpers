@@ -7,11 +7,12 @@ size = {
   lg: Infinity
 }
 
-size.xs = _shBreakPoint.xs if _shBreakPoint.xs
-size.sm = _shBreakPoint.sm if _shBreakPoint.sm
-size.md = _shBreakPoint.md if _shBreakPoint.md
-size.lg = _shBreakPoint.lg if _shBreakPoint.lg
+if typeof(_shBreakPoint) is 'object'
+  size.xs = _shBreakPoint.xs if _shBreakPoint.xs
+  size.sm = _shBreakPoint.sm if _shBreakPoint.sm
+  size.md = _shBreakPoint.md if _shBreakPoint.md
+  size.lg = _shBreakPoint.lg if _shBreakPoint.lg
 
-if _shBreakPoint.xl
-  size.xl = _shBreakPoint.xl
-  push(breakpoints, xl)
+  if _shBreakPoint.xl
+    size.xl = _shBreakPoint.xl
+    push(breakpoints, xl)

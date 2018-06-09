@@ -51,6 +51,30 @@ $npm i -D stylus-helpers
 @import "path/node_modules/stylus-helpers/helper"
 ```
 
+## ブレークポイントの設定
+
+デフォルトで `bootstrap3.x` に合わせた4段階のmedia queryを採用しています。  
+
+- `xs` : 0 - 767px
+- `sm` : 768px - 991px
+- `md` : 992px - 1199px
+- `lg` : 1200px -
+
+これをたとえば、`bootstrap4.x` にあわせた5段階のmedia queryにする場合、`helper.styl`を読み込む前に`_shBreakPoint`の名前でhashでそれぞれの識別子に対応する上限値を指定します。
+
+```stylus
+_shBreakPoint = {
+  xs: 576
+  sm: 768
+  md: 992
+  lg: 1200
+  xl: Infinity
+}
+@import "path/node_modules/stylus-helpers/helper"
+```
+
+なお、version 0.0.17現在、*xs ~ xl の5段階にしか対応していません。*
+
 ## 主な機能
 
 ### 略記
@@ -105,15 +129,7 @@ cssルールによっては単位やキーワードが補完されます。
 
 ### media queryの略記
 
-現在 `bootstrap3.x` に合わせた4段階のmedia queryを採用しています。  
-`helper.styl` を直接編集することで変更できます。
-
-- xs : 0 - 767px
-- sm : 768px - 991px
-- md : 992px - 1199px
-- lg : 1200px -
-
-上記の略記ルールに、postfixとして組み合わせて使います。
+上記の略記ルールに、media queryの識別子`(xs / sm / md / lg / (xl))`をpostfixとして組み合わせて使います。
 
 #### source
 
@@ -191,10 +207,11 @@ Block mixins として使用する場合、media queryを組み合わせて上�
 
 ### その他のmixin
 
-#### fvc(align-item-keyword)
+#### fvc(align-item-keyword, flex flug)
 
 flexコンテナを作り、内容物を天地中央に配置します。
 `align-item-keyword` を指定することで内容物の位置も指定できます。
+第2引数に`false`を指定すると`display: inline-flex`になります。デフォルト(無指定)は`display: flex`です。
 
 #### ratio(x, h, v)
 
