@@ -1,0 +1,18 @@
+rfz(baseFontSize, baseWindowWidth)
+  font-size round(baseFontSize / baseWindowWidth * 100, 1)vw
+
+rfz-xs(fz, w)
+  +xs()
+    rfz(fz, w)
+rfz-sm(fz, w)
+  +sm()
+    rfz(fz, w)
+rfz-md(fz, w)
+  +md()
+    rfz(fz, w)
+rfz-lg(fz, w)
+  +lg()
+    rfz(fz, w)
+rfz-xl(fz, w)
+  +xl()
+    rfz(fz, w)

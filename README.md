@@ -213,6 +213,30 @@ flexコンテナを作り、内容物を天地中央に配置します。
 `align-item-keyword` を指定することで内容物の位置も指定できます。
 第2引数に`false`を指定すると`display: inline-flex`になります。デフォルト(無指定)は`display: flex`です。
 
+#### lhx(fontSize, lineHeight) / lhx-\[xs|sm|md|lg|xl\](fontSize, lineHeight)
+
+カンプ内でフォントサイズと、行間がともにピクセルなどで指定されているときに`line-height`を算出します。
+
+メディアクエリを表す接尾辞をつけることもできます。
+
+##### source
+
+```stylus
+.hoge
+  // 単位は無視されますが、計算上揃える必要があります。
+  lhx-xs(24px, 40px)
+```
+
+##### yield
+
+```css
+@media (max-width: 767.98px) {
+  .hoge {
+    line-height: 1.67;
+  }
+}
+```
+
 #### ratio(x, h, v)
 
 横幅と縦横比(h:v)を指定することで長方形（デフォルトで正方形）を作ります。  
@@ -228,6 +252,30 @@ flexコンテナを作り、内容物を天地中央に配置します。
 .square
   ratio()
   // レスポンシブな正方形を作ります
+```
+
+#### rfz(baseFontSize, baseWindowWidth) / rfz-\[xs|sm|md|lg|xl\](baseFontSize, baseWindowWidth)
+
+特定のウインドウサイズ(=`baseWindowWidth`)におけるフォントサイズ(=`baseFontSize`)を指定することで、画面サイズの変更にあわせてほぼ同じ見た目で表示する`vw`単位指定でのフォントサイズに変換します。
+
+メディアクエリを表す接尾辞をつけることもできます。
+
+##### source
+
+```stylus
+.hoge
+  // iPhone6サイズのカンプで20pxで指定されていたフォント
+  rfz-xs(20, 375)
+```
+
+##### yield
+
+```css
+@media (max-width: 767.98px) {
+  .hoge {
+    font-size: 5.3vw;
+  }
+}
 ```
 
 ### 略記一覧
