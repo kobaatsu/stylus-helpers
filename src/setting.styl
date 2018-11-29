@@ -16,3 +16,8 @@ if typeof(_shBreakPoint) is 'object'
   if _shBreakPoint.xl
     size.xl = _shBreakPoint.xl
     push(breakpoints, xl)
+
+threshold = 0.02
+
+if typeof(_threshold) is 'number'
+  threshold = _threshold

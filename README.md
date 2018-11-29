@@ -51,13 +51,13 @@ $npm i -D stylus-helpers
 @import "path/node_modules/stylus-helpers/helper"
 ```
 
-## ブレークポイントの設定
+## ブレークポイント・閾値の設定
 
-デフォルトで `bootstrap3.x` に合わせた4段階のmedia queryを採用しています。  
+デフォルトで 4段階のmedia queryを採用しています。  
 
-- `xs` : 0 - 767px
-- `sm` : 768px - 991px
-- `md` : 992px - 1199px
+- `xs` : 0 - 767.98px
+- `sm` : 768px - 991.98px
+- `md` : 992px - 1199.98px
 - `lg` : 1200px -
 
 これをたとえば、`bootstrap4.x` にあわせた5段階のmedia queryにする場合、`helper.styl`を読み込む前に`_shBreakPoint`の名前でhashでそれぞれの識別子に対応する上限値を指定します。
@@ -73,7 +73,14 @@ _shBreakPoint = {
 @import "path/node_modules/stylus-helpers/helper"
 ```
 
-なお、version 0.0.17現在、*xs ~ xl の5段階にしか対応していません。*
+また、現在最大値は次段階の下限値から0.02pxを差し引いたものになっていますが、これをbootstrap3.xに合わせて1px差にする場合、 `_threshold` の名前で数値を設定します。
+
+```
+_threshold = 1
+@import "path/node_modules/stylus-helpers/helper"
+```
+
+現在、*xs ~ xl の5段階にしか対応していません。*
 
 ## 主な機能
 

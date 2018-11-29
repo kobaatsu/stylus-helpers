@@ -148,6 +148,11 @@
       "value": "right"
     },
     {
+      "spell": "fxdr",
+      "property": "flex-direction",
+      "value": "row"
+    },
+    {
       "spell": "fxwn",
       "property": "flex-wrap",
       "value": "nowrap"
