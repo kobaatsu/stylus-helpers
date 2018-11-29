@@ -292,7 +292,13 @@ flexコンテナを作り、内容物を天地中央に配置します。
 #### 値固定
 
 | 略記 | 展開されるプロパティ | 値 |
-|-------|-------------------|---------------:|
+|-|-|-|
+| aib() | align-items | baseline |
+| aic() | align-items | canter |
+| aife() | align-items | flex-end |
+| aifs() | align-items | flex-start |
+| aie() | align-items | flex-end |
+| ais() | align-items | flex-start |
 | bdn() | border            | none          |
 | bdtn()| border-top        | none          |
 | bdrn()| border-right      | none          |
@@ -319,6 +325,10 @@ flexコンテナを作り、内容物を天地中央に配置します。
 | flr() | float             | right         |
 | fll() | float             | left          |
 | fln() | float             | none          |
+| fxdc() | flex-direction | column |
+| fxdcr() | flex-direction | column-reverse |
+| fxdr() | flex-direction | row |
+| fxdrr() | flex-direction | row-reverse |
 | fxwn()| flex-wrap         | nowrap        |
 | fxww()| flex-wrap         | wrap          |
 | fxwwr()| flex-wrap         | wrap-reverse  |
@@ -373,7 +383,7 @@ flexコンテナを作り、内容物を天地中央に配置します。
 #### 値指定
 
 | 略記| 展開されるプロパティ | デフォルト | 自動単位付与(px) |
-|-------|---------------------|---------|----------:|
+|-|-|-|-|
 | bgsz(args) | background-size     | auto    | true     |
 | bgc(color)  | background-color | transparent |         |
 | bgi(image)  | background-image |         |         |

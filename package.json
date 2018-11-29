@@ -1,6 +1,6 @@
 {
   "name": "stylus-helpers",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "mixins for writing stylus",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -25,6 +25,6 @@
   "homepage": "https://github.com/kobaatsu/stylus-helpers#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-mustache": "^3.0.0"
+    "gulp-mustache": "^4.1.0"
   }
 }

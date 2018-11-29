@@ -18,6 +18,36 @@
   ],
   "rule": [
     {
+      "spell": "aib",
+      "property": "align-items",
+      "value": "baseline"
+    },
+    {
+      "spell": "aic",
+      "property": "align-items",
+      "value": "center"
+    },
+    {
+      "spell": "aife",
+      "property": "align-items",
+      "value": "flex-end"
+    },
+    {
+      "spell": "aifs",
+      "property": "align-items",
+      "value": "flex-start"
+    },
+    {
+      "spell": "aie",
+      "property": "align-items",
+      "value": "flex-end"
+    },
+    {
+      "spell": "ais",
+      "property": "align-items",
+      "value": "flex-start"
+    },
+    {
       "spell": "bdbn",
       "property": "border-bottom",
       "value": "none"
@@ -151,6 +181,21 @@
       "spell": "fxdr",
       "property": "flex-direction",
       "value": "row"
+    },
+    {
+      "spell": "fxdc",
+      "property": "flex-direction",
+      "value": "column"
+    },
+    {
+      "spell": "fxdrr",
+      "property": "flex-direction",
+      "value": "row-reverse"
+    },
+    {
+      "spell": "fxdcr",
+      "property": "flex-direction",
+      "value": "column-reverse"
     },
     {
       "spell": "fxwn",
