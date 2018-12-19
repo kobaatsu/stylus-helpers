@@ -12,3 +12,18 @@ autoUnit()
       arg += val
 
   return unquote(arg)
+
+autoUnitDeg()
+  arg = ''
+  for val, i in arguments
+    if i > 0
+      arg += ' '
+    if type(val) is 'unit'
+      if unit(val) is '' and val isnt 0
+        arg += val deg
+      else
+        arg += val
+    else
+      arg += val
+
+  return unquote(arg)

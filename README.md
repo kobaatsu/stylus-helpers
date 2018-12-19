@@ -437,5 +437,20 @@ flexコンテナを作り、内容物を天地中央に配置します。
 | miw(n)  | min-width           |         | true     |
 | mih(n)  | min-height          |         | true     |
 | trbl(args) | top: args[0] / right: args[1] / bottom: args[2] / left: args[3] | auto | true |
-| trf(args)   | transform           |         |          |
+| trf(args) | transform |  |  |
+| trfr(args) | transform: rotate(args) |  | true(deg) |
+| trfrx(d) | transform: rotateX(d) |  | true(deg) |
+| trfry(d) | transform: rotateY(d) |  | true(deg) |
+| trfrz(d) | transform: rotateZ(d) |  | true(deg) |
+| trfsc(args) | transform: scale(args) |  |  |
+| trfscx(n) | transform: scaleX(n) |  |  |
+| trfscy(n) | transform: scaleY(n) |  |  |
+| trfscz(n) | transform: scaleZ(n) |  |  |
+| trfsk(args) | transform: skew(args) |  | true(deg) |
+| trfskx(d) | transform: skewX(d) |  | true(deg) |
+| trfsky(d) | transform: skewY(d) |  | true(deg) |
+| trft(args) | transform: translate(args) |  | true |
+| trftx(val) | transform: translateX(val) |  | true |
+| trfty(val) | transform: translateY(val) |  | true |
+| trftz(val) | transform: translateZ(val) |  | true |
 | fx(args)   | flex                | 1       |          |

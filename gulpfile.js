@@ -3,12 +3,14 @@ const mustache = require('gulp-mustache')
 
 const json = {
   noArgs: './src/data/noArgs.json',
-  useArgs: './src/data/useArgs.json'
+  useArgs: './src/data/useArgs.json',
+  useSubArgs: './src/data/useSubArgs.json',
 }
 
 const template = {
   noArgs: './src/template/noArgs.mustache',
-  useArgs: './src/template/useArgs.mustache'
+  useArgs: './src/template/useArgs.mustache',
+  useSubArgs: './src/template/useSubArgs.mustache',
 }
 
 const compileNoArgsRule = () => (
@@ -29,8 +31,18 @@ const compileUseArgsRule = () => (
 )
 exports.compileUseArgsRule = compileUseArgsRule
 
+const compileUseSubArgsRule = () => (
+  gulp.src(template.useSubArgs)
+    .pipe(
+      mustache(json.useSubArgs, { extension: '.styl' } )
+    )
+    .pipe(gulp.dest('./src'))
+)
+exports.compileUseSubArgsRule = compileUseSubArgsRule
+
 const compile = gulp.parallel(
   compileNoArgsRule,
   compileUseArgsRule,
+  compileUseSubArgsRule,
 )
 exports.default = compile

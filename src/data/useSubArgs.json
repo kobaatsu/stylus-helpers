@@ -1,0 +1,107 @@
+{
+  "size": [
+    {
+      "type": "xs"
+    },
+    {
+      "type": "sm"
+    },
+    {
+      "type": "md"
+    },
+    {
+      "type": "lg"
+    },
+    {
+      "type": "xl"
+    }
+  ],
+  "rule": [
+    {
+      "spell": "trfr",
+      "property": "transform",
+      "sub": "rotate",
+      "autounitDeg": true
+    },
+    {
+      "spell": "trfrx",
+      "property": "transform",
+      "sub": "rotateX",
+      "autounitDeg": true
+    },
+    {
+      "spell": "trfry",
+      "property": "transform",
+      "sub": "rotateY",
+      "autounitDeg": true
+    },
+    {
+      "spell": "trfrz",
+      "property": "transform",
+      "sub": "rotateZ",
+      "autounitDeg": true
+    },
+    {
+      "spell": "trfsc",
+      "property": "transform",
+      "sub": "scale"
+    },
+    {
+      "spell": "trfscx",
+      "property": "transform",
+      "sub": "scaleX"
+    },
+    {
+      "spell": "trfscy",
+      "property": "transform",
+      "sub": "scaleY"
+    },
+    {
+      "spell": "trfscz",
+      "property": "transform",
+      "sub": "scaleZ"
+    },
+    {
+      "spell": "trfsk",
+      "property": "transform",
+      "sub": "skew",
+      "autounitDeg": true
+    },
+    {
+      "spell": "trfskx",
+      "property": "transform",
+      "sub": "skewX",
+      "autounitDeg": true
+    },
+    {
+      "spell": "trfsky",
+      "property": "transform",
+      "sub": "skewY",
+      "autounitDeg": true
+    },
+    {
+      "spell": "trft",
+      "property": "transform",
+      "sub": "translate",
+      "autounit": true
+    },
+    {
+      "spell": "trftx",
+      "property": "transform",
+      "sub": "translateX",
+      "autounit": true
+    },
+    {
+      "spell": "trfty",
+      "property": "transform",
+      "sub": "translateY",
+      "autounit": true
+    },
+    {
+      "spell": "trftz",
+      "property": "transform",
+      "sub": "translateZ",
+      "autounit": true
+    }
+  ]
+}
