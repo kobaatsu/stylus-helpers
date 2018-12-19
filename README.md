@@ -291,166 +291,176 @@ flexコンテナを作り、内容物を天地中央に配置します。
 
 #### 値固定
 
-| 略記 | 展開されるプロパティ | 値 |
-|-|-|-|
-| aib() | align-items | baseline |
-| aic() | align-items | canter |
-| aife() | align-items | flex-end |
-| aifs() | align-items | flex-start |
-| aie() | align-items | flex-end |
-| ais() | align-items | flex-start |
-| bdn() | border            | none          |
-| bdtn()| border-top        | none          |
-| bdrn()| border-right      | none          |
-| bdbn()| border-bottom     | none          |
-| bdln()| border-left       | none          |
-| bgn() | background        | none          |
-| bgrn()| background-repeat | none          |
-| bgszc()| background-size   | cover         |
-| clb() | clear             | both          |
-| clr() | clear             | right         |
-| cll() | clear             | left          |
-| cln() | clear             | none          |
-| db()  | display           | block         |
-| df()  | display           | flex          |
-| di()  | display           | inline        |
-| dib() | display           | inline-block  |
-| dif() | display           | inline-flex   |
-| dli() | display           | list-item     |
-| dn()  | display           | none          |
-| dtb() | display           | table         |
-| dtbc()| display           | table-cell    |
-| dtbcl()| display           | table-column  |
-| dtbr()| display           | table-row     |
-| flr() | float             | right         |
-| fll() | float             | left          |
-| fln() | float             | none          |
-| fxdc() | flex-direction | column |
-| fxdcr() | flex-direction | column-reverse |
-| fxdr() | flex-direction | row |
-| fxdrr() | flex-direction | row-reverse |
-| fxwn()| flex-wrap         | nowrap        |
-| fxww()| flex-wrap         | wrap          |
-| fxwwr()| flex-wrap         | wrap-reverse  |
-| fwb() | font-weight       | bold          |
-| fwn() | font-weight       | normal        |
-| jcc() | justify-content   | center        |
-| jcfe()| justify-content   | flex-end      |
-| jcfs()| justify-content   | flex-start    |
-| jcsa()| justify-content   | space-around  |
-| jcsb()| justify-content   | space-between |
-| lisn()| list-style        | none          |
-| oln() | outline           | none          |
-| ova() | overflow          | auto          |
-| ovh() | overflow          | hidden        |
-| ovs() | overflow          | scroll        |
-| ovv() | overflow          | visible       |
-| ovxa()| overflow-x        | auto          |
-| ovxh()| overflow-x        | hidden        |
-| ovxs()| overflow-x        | scroll        |
-| ovxv()| overflow-x        | visible       |
-| ovya()| overflow-y        | auto          |
-| ovyh()| overflow-y        | hidden        |
-| ovys()| overflow-y        | scroll        |
-| ovyv()| overflow-y        | visible       |
-| poa() | position          | absolute      |
-| pof() | position          | fixed         |
-| por() | position          | relative      |
-| pos() | position          | static        |
-| poen()| pointer-events    | none          |
-| tac() | text-align        | center        |
-| tal() | text-align        | left          |
-| tar() | text-align        | right         |
-| tdl() | text-decoration   | line-through  |
-| tdn() | text-decoration   | none          |
-| tdo() | text-decoration   | overline      |
-| tdu() | text-decoration   | underline     |
-| vasup()| vertical-align    | super         |
-| vat() | vertical-align    | top           |
-| vatt()| vertical-align    | text-top      |
-| vam() | vertical-align    | middle        |
-| vabl()| vertical-align    | baseline      |
-| vab() | vertical-align    | bottom        |
-| vatb()| vertical-align    | text-bottom   |
-| vasub()| vertical-align    | sub           |
-| vh()  | visibility        | hidden        |
-| vv()  | visibility        | visible       |
-| wsn() | white-space       | normal        |
-| wsnw()| white-space       | nowrap        |
-| wsp() | white-space       | pre           |
+| 略記    | プロパティ        | 値             |
+| ------- | ----------------- | -------------- |
+| aib()   | align-items       | baseline       |
+| aic()   | align-items       | canter         |
+| aife()  | align-items       | flex-end       |
+| aifs()  | align-items       | flex-start     |
+| aie()   | align-items       | flex-end       |
+| ais()   | align-items       | flex-start     |
+| bdn()   | border            | none           |
+| bdtn()  | border-top        | none           |
+| bdrn()  | border-right      | none           |
+| bdbn()  | border-bottom     | none           |
+| bdln()  | border-left       | none           |
+| bgn()   | background        | none           |
+| bgrn()  | background-repeat | none           |
+| bgszc() | background-size   | cover          |
+| clb()   | clear             | both           |
+| clr()   | clear             | right          |
+| cll()   | clear             | left           |
+| cln()   | clear             | none           |
+| db()    | display           | block          |
+| df()    | display           | flex           |
+| di()    | display           | inline         |
+| dib()   | display           | inline-block   |
+| dif()   | display           | inline-flex    |
+| dli()   | display           | list-item      |
+| dn()    | display           | none           |
+| dtb()   | display           | table          |
+| dtbc()  | display           | table-cell     |
+| dtbcl() | display           | table-column   |
+| dtbr()  | display           | table-row      |
+| flr()   | float             | right          |
+| fll()   | float             | left           |
+| fln()   | float             | none           |
+| fxdc()  | flex-direction    | column         |
+| fxdcr() | flex-direction    | column-reverse |
+| fxdr()  | flex-direction    | row            |
+| fxdrr() | flex-direction    | row-reverse    |
+| fxwn()  | flex-wrap         | nowrap         |
+| fxww()  | flex-wrap         | wrap           |
+| fxwwr() | flex-wrap         | wrap-reverse   |
+| fwb()   | font-weight       | bold           |
+| fwn()   | font-weight       | normal         |
+| jcc()   | justify-content   | center         |
+| jcfe()  | justify-content   | flex-end       |
+| jcfs()  | justify-content   | flex-start     |
+| jcsa()  | justify-content   | space-around   |
+| jcsb()  | justify-content   | space-between  |
+| lisn()  | list-style        | none           |
+| oln()   | outline           | none           |
+| offl()  | object-fit        | fill           |
+| ofcn()  | object-fit        | contain        |
+| ofcv()  | object-fit        | cover          |
+| ofn()   | object-fit        | none           |
+| ofsd()  | object-fit        | scale-down     |
+| ova()   | overflow          | auto           |
+| ovh()   | overflow          | hidden         |
+| ovs()   | overflow          | scroll         |
+| ovv()   | overflow          | visible        |
+| ovxa()  | overflow-x        | auto           |
+| ovxh()  | overflow-x        | hidden         |
+| ovxs()  | overflow-x        | scroll         |
+| ovxv()  | overflow-x        | visible        |
+| ovya()  | overflow-y        | auto           |
+| ovyh()  | overflow-y        | hidden         |
+| ovys()  | overflow-y        | scroll         |
+| ovyv()  | overflow-y        | visible        |
+| poa()   | position          | absolute       |
+| pof()   | position          | fixed          |
+| por()   | position          | relative       |
+| pos()   | position          | static         |
+| poen()  | pointer-events    | none           |
+| tac()   | text-align        | center         |
+| tal()   | text-align        | left           |
+| tar()   | text-align        | right          |
+| tdl()   | text-decoration   | line-through   |
+| tdn()   | text-decoration   | none           |
+| tdo()   | text-decoration   | overline       |
+| tdu()   | text-decoration   | underline      |
+| vasup() | vertical-align    | super          |
+| vat()   | vertical-align    | top            |
+| vatt()  | vertical-align    | text-top       |
+| vam()   | vertical-align    | middle         |
+| vabl()  | vertical-align    | baseline       |
+| vab()   | vertical-align    | bottom         |
+| vatb()  | vertical-align    | text-bottom    |
+| vasub() | vertical-align    | sub            |
+| vh()    | visibility        | hidden         |
+| vv()    | visibility        | visible        |
+| wsn()   | white-space       | normal         |
+| wsnw()  | white-space       | nowrap         |
+| wsp()   | white-space       | pre            |
 
 
 #### 値指定
 
-| 略記| 展開されるプロパティ | デフォルト | 自動単位付与(px) |
-|-|-|-|-|
-| bgsz(args) | background-size     | auto    | true     |
-| bgc(color)  | background-color | transparent |         |
-| bgi(image)  | background-image |         |         |
-| bgp(args)  | background-potion | center center |         |
-| fz(n)   | font-size           |         | true     |
-| c(color)    | color               |         |          |
-| ls(n)   | letter-spacing      |         | true     |
-| lh(n)   | line-height         |         |          |
-| cnt(content)  | content             | none    |          |
-| m(args)   | margin         | auto    | true     |
-| mt(n)   | margin-top          | auto    | true     |
-| mr(n)   | margin-right        | auto    | true     |
-| mb(n)   | margin-bottom       | auto    | true     |
-| ml(n)   | margin-left         | auto    | true     |
-| mx(n)   | margin-right / margin-left         | auto    | true     |
-| p(args)    | padding             |         | true     |
-| pt(n)   | padding-top         |         | true     |
-| pr(n)   | padding-right       |         | true     |
-| pb(n)   | padding-bottom      |         | true     |
-| pl(n)   | padding-left        |         | true     |
-| px(n)   | padding-right / padding-left         |      | true     |
-| t(n)    | top                 | auto    | true     |
-| r(n)    | right               | auto    | true     |
-| b(n)    | bottom              | auto    | true     |
-| l(n)    | left                | auto    | true     |
-| w(n)    | width               | auto    | true     |
-| h(n)    | height              | auto    | true     |
-| bdrs(args) | border-radius       | 0       | true     |
-| bd(args)   | border              |         |          |
-| bdw(n)  | border-width        |         | true     |
-| bds(keyword)  | border-style        | solid   |          |
-| bdc(color)  | border-color        |         |          |
-| bdt(n)  | border-top          |         |          |
-| bdtw(n) | border-top-width    |         | true     |
-| bdts(keyword) | border-top-style    | solid   |          |
-| bdtc(color) | border-top-color    |         |          |
-| bdr(n)  | border-right        |         |          |
-| bdrw(n) | border-right-width  |         | true     |
-| bdrst(keyword)| border-right-style  | solid   |          |
-| bdrc(color) | border-right-color  |         |          |
-| bdb(n)  | border-bottom       |         |          |
-| bdbw(n) | border-bottom-width |         | true     |
-| bdbs(keyword) | border-bottom-style | solid   |          |
-| bdbc(color) | border-bottom-color |         |          |
-| bdl(n)  | border-left         |         |          |
-| bdlw(n) | border-left-width   |         | true     |
-| bdls(keyword) | border-left-style   | solid   |          |
-| bdlc(color) | border-left-color   |         |          |
-| maw(n)  | max-width           | none    | true     |
-| mah(n)  | max-height          | none    | true     |
-| miw(n)  | min-width           |         | true     |
-| mih(n)  | min-height          |         | true     |
-| trbl(args) | top: args[0] / right: args[1] / bottom: args[2] / left: args[3] | auto | true |
-| trf(args) | transform |  |  |
-| trfr(args) | transform: rotate(args) |  | true(deg) |
-| trfrx(d) | transform: rotateX(d) |  | true(deg) |
-| trfry(d) | transform: rotateY(d) |  | true(deg) |
-| trfrz(d) | transform: rotateZ(d) |  | true(deg) |
-| trfsc(args) | transform: scale(args) |  |  |
-| trfscx(n) | transform: scaleX(n) |  |  |
-| trfscy(n) | transform: scaleY(n) |  |  |
-| trfscz(n) | transform: scaleZ(n) |  |  |
-| trfsk(args) | transform: skew(args) |  | true(deg) |
-| trfskx(d) | transform: skewX(d) |  | true(deg) |
-| trfsky(d) | transform: skewY(d) |  | true(deg) |
-| trft(args) | transform: translate(args) |  | true |
-| trftx(val) | transform: translateX(val) |  | true |
-| trfty(val) | transform: translateY(val) |  | true |
-| trftz(val) | transform: translateZ(val) |  | true |
-| fx(args)   | flex                | 1       |          |
+| 略記           | プロパティ                 | デフォルト  | 自動単位 |
+| -------------- | -------------------------- | ----------- | -------- |
+| bgsz(args)     | background-size            | auto        | px       |
+| bgc(color)     | background-color           | transparent |          |
+| bgi(image)     | background-image           |             |          |
+| bgp(args)      | background-potion          | 50% 50%     |          |
+| fz(n)          | font-size                  |             | px       |
+| c(color)       | color                      |             |          |
+| ls(n)          | letter-spacing             |             | px       |
+| lh(n)          | line-height                |             |          |
+| cnt(content)   | content                    | none        |          |
+| m(args)        | margin                     | auto        | px       |
+| mt(n)          | margin-top                 | auto        | px       |
+| mr(n)          | margin-right               | auto        | px       |
+| mb(n)          | margin-bottom              | auto        | px       |
+| ml(n)          | margin-left                | auto        | px       |
+| mx(n)          | margin-right               | auto        | px       |
+|                | margin-left                | auto        | px       |
+| p(args)        | padding                    |             | px       |
+| pt(n)          | padding-top                |             | px       |
+| pr(n)          | padding-right              |             | px       |
+| pb(n)          | padding-bottom             |             | px       |
+| pl(n)          | padding-left               |             | px       |
+| px(n)          | padding-right              |             | px       |
+|                | padding-left               |             | px       |
+| t(n)           | top                        | auto        | px       |
+| r(n)           | right                      | auto        | px       |
+| b(n)           | bottom                     | auto        | px       |
+| l(n)           | left                       | auto        | px       |
+| trbl(args)     | top: args[0]               | auto        | px       |
+|                | right: args[1]             | auto        | px       |
+|                | bottom: args[2]            | auto        | px       |
+|                | left: args[3]              | auto        | px       |
+| w(n)           | width                      | auto        | px       |
+| h(n)           | height                     | auto        | px       |
+| bdrs(args)     | border-radius              | 0           | px       |
+| bd(args)       | border                     |             |          |
+| bdw(n)         | border-width               |             | px       |
+| bds(keyword)   | border-style               | solid       |          |
+| bdc(color)     | border-color               |             |          |
+| bdt(n)         | border-top                 |             |          |
+| bdtw(n)        | border-top-width           |             | px       |
+| bdts(keyword)  | border-top-style           | solid       |          |
+| bdtc(color)    | border-top-color           |             |          |
+| bdr(n)         | border-right               |             |          |
+| bdrw(n)        | border-right-width         |             | px       |
+| bdrst(keyword) | border-right-style         | solid       |          |
+| bdrc(color)    | border-right-color         |             |          |
+| bdb(n)         | border-bottom              |             |          |
+| bdbw(n)        | border-bottom-width        |             | px       |
+| bdbs(keyword)  | border-bottom-style        | solid       |          |
+| bdbc(color)    | border-bottom-color        |             |          |
+| bdl(n)         | border-left                |             |          |
+| bdlw(n)        | border-left-width          |             | px       |
+| bdls(keyword)  | border-left-style          | solid       |          |
+| bdlc(color)    | border-left-color          |             |          |
+| maw(n)         | max-width                  | none        | px       |
+| mah(n)         | max-height                 | none        | px       |
+| miw(n)         | min-width                  |             | px       |
+| mih(n)         | min-height                 |             | px       |
+| trf(args)      | transform                  |             |          |
+| trfr(args)     | transform: rotate(args)    |             | deg      |
+| trfrx(d)       | transform: rotateX(d)      |             | deg      |
+| trfry(d)       | transform: rotateY(d)      |             | deg      |
+| trfrz(d)       | transform: rotateZ(d)      |             | deg      |
+| trfsc(args)    | transform: scale(args)     |             |          |
+| trfscx(n)      | transform: scaleX(n)       |             |          |
+| trfscy(n)      | transform: scaleY(n)       |             |          |
+| trfscz(n)      | transform: scaleZ(n)       |             |          |
+| trfsk(args)    | transform: skew(args)      |             | deg      |
+| trfskx(d)      | transform: skewX(d)        |             | deg      |
+| trfsky(d)      | transform: skewY(d)        |             | deg      |
+| trft(args)     | transform: translate(args) |             | px       |
+| trftx(val)     | transform: translateX(val) |             | px       |
+| trfty(val)     | transform: translateY(val) |             | px       |
+| trftz(val)     | transform: translateZ(val) |             | px       |
+| fx(args)       | flex                       | 1           |          |

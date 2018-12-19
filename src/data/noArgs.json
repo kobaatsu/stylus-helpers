@@ -258,6 +258,31 @@
       "value": "none"
     },
     {
+      "spell": "offl",
+      "property": "object-fit",
+      "value": "fill"
+    },
+    {
+      "spell": "ofcn",
+      "property": "object-fit",
+      "value": "contain"
+    },
+    {
+      "spell": "ofcv",
+      "property": "object-fit",
+      "value": "cover"
+    },
+    {
+      "spell": "ofn",
+      "property": "object-fit",
+      "value": "none"
+    },
+    {
+      "spell": "ofsd",
+      "property": "object-fit",
+      "value": "scale-down"
+    },
+    {
       "spell": "ova",
       "property": "overflow",
       "value": "auto"
