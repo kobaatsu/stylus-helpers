@@ -436,5 +436,6 @@ flexコンテナを作り、内容物を天地中央に配置します。
 | mah(n)  | max-height          | none    | true     |
 | miw(n)  | min-width           |         | true     |
 | mih(n)  | min-height          |         | true     |
+| trbl(args) | top: args[0] / right: args[1] / bottom: args[2] / left: args[3] | auto | true |
 | trf(args)   | transform           |         |          |
 | fx(args)   | flex                | 1       |          |

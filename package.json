@@ -1,10 +1,10 @@
 {
   "name": "stylus-helpers",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "mixins for writing stylus",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": ""
+    "build": "gulp"
   },
   "repository": {
     "type": "git",
@@ -18,13 +18,13 @@
   ],
   "author": {
     "name": "KOBAYASHI atsushi",
-    "email": "kobaatsu@ao-neko.com"
+    "email": "kobaatsu@gmail.com"
   },
   "license": "MIT",
   "main": "helper.styl",
   "homepage": "https://github.com/kobaatsu/stylus-helpers#readme",
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-mustache": "^4.1.0"
   }
 }
