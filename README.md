@@ -214,7 +214,61 @@ Block mixins として使用する場合、media queryを組み合わせて上�
 
 ### その他のmixin
 
-#### fvc(align-item-keyword, flex flug)
+#### bg(x, y, color) / bg-\[xs|sm|md|lg|xl\](x, y, color)
+
+`background-repeat` を `no-repeat` に設定し、 `background-color`  `background-position` を同時に指定します。
+
+```css
+/* Default */
+background-color: transparent; /* color */
+background-repeat: no-repeat;
+background-position: 50% 50%; /* x y */
+```
+
+#### br-medias()
+各メディアクエリに対応した汎用 `.br-**` クラスを指定します。 `<br>` タグ専用です。
+
+```css
+/*
+  br-medias()
+*/
+br.br-lg,
+br.br-md,
+br.br-sm,
+br.br-xs {
+  display: none;
+}
+@media (min-width: 1200px) and (max-width: 1599.98px) {
+  br.br-lg {
+    display: block;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  br.br-md {
+    display: block;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  br.br-sm {
+    display: block;
+  }
+}
+@media (max-width: 767.98px) {
+  br.br-xs {
+    display: block;
+  }
+}
+```
+
+#### cf() / cf-\[xs|sm|md|lg|xl\]()
+
+clearfixとなるCSSコードを生成します。
+
+#### ellips() / ellips-\[xs|sm|md|lg|xl\]()
+
+省略文字を表示するCSSコードを生成します。
+
+#### fvc(align-item-keyword, flex flug) / fvc-\[xs|sm|md|lg|xl\](align-item-keyword, flex flug)
 
 flexコンテナを作り、内容物を天地中央に配置します。
 `align-item-keyword` を指定することで内容物の位置も指定できます。
@@ -244,21 +298,22 @@ flexコンテナを作り、内容物を天地中央に配置します。
 }
 ```
 
-#### ratio(x, h, v)
+#### ratio(width, h, v) / ratio-\[xs|sm|md|lg|xl\](width, h, v)
 
-横幅と縦横比(h:v)を指定することで長方形（デフォルトで正方形）を作ります。  
-擬似要素 `::after` のパディングを使って無理やり高さを出すやり方ですので、`::after` とは併用できません。  
+横幅( `width` デフォルトで `100%` )と縦横比( `h:v` )を指定することで長方形（デフォルトで `h = v` 正方形）を作ります。  
+擬似要素 `::after` のパディングを使って無理やり高さを出すやり方ですので、 `::after` とは併用できません。
+
 参考: [レスポンシブデザインで要素の縦横比を固定する](https://toduq.com/responsive-ratio/) [可変幅で正方形](https://codepen.io/kobaatsu/pen/zvvEzo)
 
 `position: relative;` が指定されます。内容物に `position: absolute;` などを指定して使用します。
 
 ```stylus
 .hd
-  ratio(100%, 16, 9)
-  // レスポンシブな 16:9 の長方形を作ります
+  // ブラウザ横幅いっぱいで、レスポンシブな 16:9 の長方形を作ります
+  ratio(100vw, 16, 9)
 .square
-  ratio()
   // レスポンシブな正方形を作ります
+  ratio()
 ```
 
 #### rfz(baseFontSize, baseWindowWidth) / rfz-\[xs|sm|md|lg|xl\](baseFontSize, baseWindowWidth)
@@ -285,6 +340,17 @@ flexコンテナを作り、内容物を天地中央に配置します。
 }
 ```
 
+#### sz(width, height) / sz-\[xs|sm|md|lg|xl\](width, height)
+
+`width` `height` 領域を指定します。 `width` のみの指定で正方形の領域を指定します。デフォルトで `auto` になります。
+
+
+#### trbl0() / trbl0-\[xs|sm|md|lg|xl\]()
+
+box内の天地左右中央に配置される `position: absolute` のボックスを生成します。別途 `width` `height` の指定が必要です。
+
+
+
 ### 略記一覧
 
 引数の指定 `()` の前にmedia queryを示す接尾辞 `-xs` `-sm` `-md` `-lg` `(-xl)` をつけることで、それぞれ対応する条件にのみ適用されるようになります。
@@ -295,10 +361,10 @@ flexコンテナを作り、内容物を天地中央に配置します。
 | ------- | ----------------- | -------------- |
 | aib()   | align-items       | baseline       |
 | aic()   | align-items       | canter         |
-| aife()  | align-items       | flex-end       |
 | aifs()  | align-items       | flex-start     |
-| aie()   | align-items       | flex-end       |
 | ais()   | align-items       | flex-start     |
+| aife()  | align-items       | flex-end       |
+| aie()   | align-items       | flex-end       |
 | bdn()   | border            | none           |
 | bdtn()  | border-top        | none           |
 | bdrn()  | border-right      | none           |
