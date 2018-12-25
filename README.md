@@ -60,7 +60,7 @@ $npm i -D stylus-helpers
 - `md` : 992px - 1199.98px
 - `lg` : 1200px -
 
-これをたとえば、`bootstrap4.x` にあわせた5段階のmedia queryにする場合、`helper.styl`を読み込む前に`_shBreakPoint`の名前でhashでそれぞれの識別子に対応する上限値を指定します。
+これをたとえば、`bootstrap4.x` にあわせた5段階のmedia queryにする場合、 `_shBreakPoint`の名前でhashでそれぞれの識別子に対応する上限値を指定し、 `helper.styl` ミックスインをインポートする前に指定します。
 
 ```stylus
 _shBreakPoint = {
@@ -73,10 +73,10 @@ _shBreakPoint = {
 @import "path/node_modules/stylus-helpers/helper"
 ```
 
-また、現在最大値は次段階の下限値から0.02pxを差し引いたものになっていますが、これをbootstrap3.xに合わせて1px差にする場合、 `_threshold` の名前で数値を設定します。
+また、現在最大値は次段階の下限値から0.02pxを差し引いたものになっていますが、これをbootstrap3.xに合わせて1px差にする場合、 `_shThreshold` の名前で数値を設定します。
 
 ```
-_threshold = 1
+_shThreshold = 1
 @import "path/node_modules/stylus-helpers/helper"
 ```
 
