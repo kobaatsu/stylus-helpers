@@ -274,6 +274,15 @@ flexコンテナを作り、内容物を天地中央に配置します。
 `align-item-keyword` を指定することで内容物の位置も指定できます。
 第2引数に`false`を指定すると`display: inline-flex`になります。デフォルト(無指定)は`display: flex`です。
 
+#### highlighter(color, breadth, base-color) / highlighter-\[xs|sm|md|lg|xl\](color, breadth, base-color)
+
+ブロック・インラインブロック下部に蛍光ペンで引いたようなアンダーラインをつけます。 `background-image: linear-gradient()` を使用しているので、併用はできません。
+
+`color` にはカラーコードを指定します。デフォルトで `lightgreen` が指定されます。  
+`breadth` には線の太さを1 - 10の数値で指定します。デフォルトで `1(10%)` が指定されます。  
+`base-color` には線以外の「地色」を指定します。デフォルトで `transparent` が指定されます。
+
+
 #### lhx(fontSize, lineHeight) / lhx-\[xs|sm|md|lg|xl\](fontSize, lineHeight)
 
 カンプ内でフォントサイズと、行間がともにピクセルなどで指定されているときに`line-height`を算出します。

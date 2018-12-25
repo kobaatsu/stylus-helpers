@@ -1,0 +1,21 @@
+highlighter(color = lightgreen, breadth = 1, base = transparent)
+  baseEnd = (100 - breadth * 10)%
+  lineStart = baseEnd + .1%
+  lineEnd = 100%
+  background-image: linear-gradient(180deg, base, base baseEnd, color lineStart, color lineEnd)
+
+highlighter-xs(color, breadth, base)
+  +xs()
+    highlighter()
+highlighter-sm(color, breadth, base)
+  +sm()
+    highlighter()
+highlighter-md(color, breadth, base)
+  +md()
+    highlighter()
+highlighter-lg(color, breadth, base)
+  +lg()
+    highlighter()
+highlighter-xl(color, breadth, base)
+  +xl()
+    highlighter()
