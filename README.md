@@ -523,19 +523,21 @@ box内の天地左右中央に配置される `position: absolute` のボック�
 | miw(n)         | min-width                  |             | px       |
 | mih(n)         | min-height                 |             | px       |
 | trf(args)      | transform                  |             |          |
-| trfr(args)     | transform: rotate(args)    |             | deg      |
+| trfr(args)     | transform: rotate(args)    |             | *      |
 | trfrx(d)       | transform: rotateX(d)      |             | deg      |
 | trfry(d)       | transform: rotateY(d)      |             | deg      |
 | trfrz(d)       | transform: rotateZ(d)      |             | deg      |
-| trfsc(args)    | transform: scale(args)     |             |          |
+| trfsc(args)    | transform: scale(args)     |             | *         |
 | trfscx(n)      | transform: scaleX(n)       |             |          |
 | trfscy(n)      | transform: scaleY(n)       |             |          |
 | trfscz(n)      | transform: scaleZ(n)       |             |          |
-| trfsk(args)    | transform: skew(args)      |             | deg      |
+| trfsk(args)    | transform: skew(args)      |             | *      |
 | trfskx(d)      | transform: skewX(d)        |             | deg      |
 | trfsky(d)      | transform: skewY(d)        |             | deg      |
-| trft(args)     | transform: translate(args) |             | px       |
+| trft(args)     | transform: translate(args) |             | *       |
 | trftx(val)     | transform: translateX(val) |             | px       |
 | trfty(val)     | transform: translateY(val) |             | px       |
 | trftz(val)     | transform: translateZ(val) |             | px       |
 | fx(args)       | flex                       | 1           |          |
+
+* カンマ区切り3値または2値で指定する。1値のみの場合は同じ値が第1値第2値に適用される。
