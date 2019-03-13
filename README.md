@@ -480,7 +480,8 @@ box内の天地左右中央に配置される `position: absolute` のボック�
 | ml(n)          | margin-left                | auto        | px       |
 | mx(n)          | margin-right               | auto        | px       |
 |                | margin-left                | auto        | px       |
-| p(args)        | padding                    |             | px       |
+| pd(args)**     | padding                    |             | px       |
+| p-[xs|sm|md|lg|xl](args)** | padding        |             | px       |
 | pt(n)          | padding-top                |             | px       |
 | pr(n)          | padding-right              |             | px       |
 | pb(n)          | padding-bottom             |             | px       |
@@ -541,3 +542,4 @@ box内の天地左右中央に配置される `position: absolute` のボック�
 | fx(args)       | flex                       | 1           |          |
 
 * カンマ区切り3値または2値で指定する。1値のみの場合は同じ値が第1値第2値に適用される。
+** `p()` がbuiltin-functionとかぶっていたので変更 `p-` はメディアクエリ修飾子との組み合わせのみ使用可能

@@ -1,0 +1,40 @@
+pd()
+  if typeof(arguments) is 'unit'
+    padding autoUnit(arguments)
+  else
+    padding arguments
+
+p-xs()
+  +xs()
+    pd(arguments)
+p-sm()
+  +sm()
+    pd(arguments)
+p-md()
+  +md()
+    pd(arguments)
+p-lg()
+  +lg()
+    pd(arguments)
+
+pd-xs()
+  +xs()
+    pd(arguments)
+pd-sm()
+  +sm()
+    pd(arguments)
+pd-md()
+  +md()
+    pd(arguments)
+pd-lg()
+  +lg()
+    pd(arguments)
+
+if index(breakpoints, xl)
+  p-xl()
+    +xl()
+      pd(arguments)
+
+  pd-xl()
+    +xl()
+      pd(arguments)

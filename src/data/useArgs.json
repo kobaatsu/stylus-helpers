@@ -102,12 +102,6 @@
       "autounit": true
     },
     {
-      "spell": "p",
-      "property": "padding",
-      "default": "",
-      "autounit": true
-    },
-    {
       "spell": "pt",
       "property": "padding-top",
       "default": "",
